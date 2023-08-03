@@ -1,79 +1,30 @@
 package ru.geekbrains.lesson3;
 
+import java.util.HashMap;
+
 public class Program {
-
     public static void main(String[] args) {
+        System.out.println(-7 % 4);
 
-        class Node {
-            int data;
-            Node next;
+        HashMap<String, String> hashMap1 = new HashMap<>(4);
 
-            Node(int data) {
-                this.data = data;
-                this.next = null;
-            }
-        }
+        String ret = hashMap1.put("+79001112233", "Андрей");
+        ret = hashMap1.put("+79001112232", "Василий");
+        ret = hashMap1.put("+79001112234", "Александр1");
+        ret = hashMap1.put("+79001112235", "Александр2");
+        ret = hashMap1.put("+79001112236", "Александр3");
+        ret = hashMap1.put("+79001112237", "Александр4");
+        ret = hashMap1.put("+79001112212", "Александр4");
+        ret = hashMap1.put("+79001112213", "Александр4");
+        ret = hashMap1.put("+79001112214", "Александр4");
+
+//        ret = hashMap1.get("+79001112233");
+
+        //ret = hashMap1.remove("+79001112233");
+        //ret = hashMap1.remove("+79001112233");
+
+        //ret = hashMap1.get("+79001112233");
 
 
-//    разворота односвязного списка
-        class LinkedList {
-            Node head;
-
-            void reverse() {
-                Node prev = null;
-                Node current = head;
-                Node next = null;
-
-                while (current != null) {
-                    next = current.next;
-                    current.next = prev;
-                    prev = current;
-                    current = next;
-                }
-                head = prev;
-
-            }
-
-//        разворота двухсвязного связного списка
-
-            class Node {
-                int data;
-                Node prev;
-                Node next;
-
-                Node(int data) {
-                    this.data = data;
-                    this.prev = null;
-                    this.next = null;
-                }
-            }
-
-            class DoublyLinkedList {
-                Node head;
-
-                void reverse() {
-                    Node temp = null;
-                    Node current = head;
-
-                    while (current != null) {
-                        temp = current.prev;
-                        current.prev = current.next;
-                        current.next = temp;
-                        current = current.prev;
-                    }
-
-                    if (temp != null) {
-                        head = temp.prev;
-                    }
-                }
-            }
-        }
     }
 }
-
-
-
-
-
-
-
